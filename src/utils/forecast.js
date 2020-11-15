@@ -9,7 +9,7 @@ const forecast = (longitude, latitude,  callback) => {
         } else if (body.error) {
             callback('Invalid Coordinator!', undefined)
         } else {
-            callback(undefined, 'It is currently ' + body.current.temperature + ' degree out.  It feels like ' + body.current.feelslike + ' degree.')
+            callback(undefined, 'It is currently ' + body.current.temperature + ' degree out.  It feels like ' + body.current.feelslike + ' degree. The humidity is ' + body.current.humidity)
         }
 
     })
